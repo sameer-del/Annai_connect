@@ -1,6 +1,8 @@
 import React from "react";
 import { useUser } from "../pages/UserContext";
 import { useNavigate } from "react-router-dom";
+import Navbar from "./Navbar";
+import DashboardView from "./DashboardView";
 const Dashboard = () => {
   const { user, setUser } = useUser();
   const navigate = useNavigate();
@@ -8,14 +10,11 @@ const Dashboard = () => {
   if (!user) {
     return <p>user not found</p>;
   }
-  const handleClick = () => {
-    setUser(null);
-    localStorage.removeItem("user");
-    navigate("/");
-  };
+
   return (
     <section>
-      <section className="h-[100vh] bg-amber-300">
+      <Navbar />
+      <section className=" bg-amber-300">
         <div className="dashboard h-[50vh] bg-amber-100 flex justify-center items-center">
           <div className="bg-white flex-1 flex flex-col justify-center ml-[100px] h-full">
             <h1 className="text-[32px] font-[600] capitalize">{user.name}</h1>
@@ -34,7 +33,7 @@ const Dashboard = () => {
             />
           </div>
         </div>
-        <button onClick={handleClick}>log out</button>
+        <DashboardView />
       </section>
     </section>
   );

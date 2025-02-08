@@ -1,6 +1,7 @@
 const db = require("../modules/dataBase");
 
 const getData = async (req, res) => {
+  
   try {
     const query = "SELECT * FROM students";
 

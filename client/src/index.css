@@ -8,12 +8,29 @@
 
 body {
   background-color: #f8f8f8;
-  overflow: hidden;
 }
 
-.button {
-  margin-top: 30px;
+button {
+  background-color: blueviolet;
+  padding: 10px 35px;
+  border-radius: 15px;
+  font-size: 18px;
+  text-transform: uppercase;
+  color: white;
 }
 .dashboard {
   border-radius: 10px;
+}
+.navbar {
+  margin: auto;
+  padding: 50px 0;
+}
+.dashboardview {
+  margin-top: 100px;
+}
+.fields {
+  padding: 15px 0;
+}
+.fields-button {
+  padding: 20px 0;
 }

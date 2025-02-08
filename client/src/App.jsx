@@ -7,6 +7,7 @@ import Login from "./pages/Login";
 import Dashboard from "./pages/Dashboard";
 import { Toaster } from "react-hot-toast";
 import { useUser } from "./pages/UserContext";
+import StudentDetails from "./pages/StudentDetails";
 
 function App() {
   function ProtectedRoutes({ children }) {
@@ -28,6 +29,7 @@ function App() {
               </ProtectedRoutes>
             }
           />
+          <Route path="/student/:rollNo" element={<StudentDetails />} />
         </Routes>
       </BrowserRouter>
     </>

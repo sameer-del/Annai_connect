@@ -8,6 +8,8 @@ export const UserProvider = ({ children }) => {
     return savedUser ? JSON.parse(savedUser):null;
   });
 
+
+
   useEffect(()=>{
     if(user){
       localStorage.setItem("user",JSON.stringify(user))

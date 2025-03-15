@@ -1,4 +1,6 @@
-@import "tailwindcss";
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
 * {
   padding: 0;
@@ -8,29 +10,23 @@
 
 body {
   background-color: #f8f8f8;
+  
+  background-size: 100px 100px;
+  font-family: serif;
+  background-image: linear-gradient(
+      to right,
+      rgb(212, 212, 212) 1px,
+      transparent 1px
+    ),
+    linear-gradient(to bottom, rgb(215, 215, 215) 1px, transparent 1px);
 }
 
-button {
+/* button {
   background-color: blueviolet;
   padding: 10px 35px;
   border-radius: 15px;
   font-size: 18px;
   text-transform: uppercase;
   color: white;
-}
-.dashboard {
-  border-radius: 10px;
-}
-.navbar {
-  margin: auto;
-  padding: 50px 0;
-}
-.dashboardview {
-  margin-top: 100px;
-}
-.fields {
-  padding: 15px 0;
-}
-.fields-button {
-  padding: 20px 0;
-}
+} */
+

@@ -8,7 +8,10 @@ import Dashboard from "./pages/Dashboard";
 import { Toaster } from "react-hot-toast";
 import { useUser } from "./pages/UserContext";
 import StudentDetails from "./pages/StudentDetails";
-
+import CheckMyDetails from "./pages/CheckMyDetails";
+import AddStudent from "./pages/admin/AddStudent";
+import Admin from "./pages/admin/Admin";
+import EditStudent from "./pages/EditDetails";
 function App() {
   function ProtectedRoutes({ children }) {
     const { user } = useUser();
@@ -30,6 +33,10 @@ function App() {
             }
           />
           <Route path="/student/:rollNo" element={<StudentDetails />} />
+          <Route path="/viewDetails" element={<CheckMyDetails />} />
+          <Route path="/admin/add-student" element={<AddStudent />} />
+          <Route path="/admin" element={<Admin/>}/>
+          <Route path="/student/:rollNo/edit" element={<EditStudent />} />
         </Routes>
       </BrowserRouter>
     </>
